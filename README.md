@@ -14,7 +14,7 @@ Camouflaged object detection (COD) is significantly harder than salient object d
 
 - **Dual-branch ResNet-50 backbone** with separate Search and Identification pathways
 - **Receptive Field (RF) blocks** with four parallel dilated convolutions (d = 1, 3, 5, 7) for multi-scale feature extraction
-- **Search Attention gate** — coarse saliency map from Search Module steers the Identification Module's feature focus
+- **Search Attention gate** - coarse saliency map from Search Module steers the Identification Module's feature focus
 - **Partial Decoder Components (PDC)** for progressive multi-scale mask upsampling
 - **Joint loss supervision** on both decoder outputs (BCE + Dice)
 - **Grad-CAM visualizations** targeting `PDC_SM.conv4` and `PDC_IM.conv4` for interpretability
@@ -108,7 +108,7 @@ flowchart TD
         └── gt/
 ```
 
-### Image–Mask Pairing
+### Image-Mask Pairing
 Images and masks are paired by **matching filename stem** (e.g., `CAM_1.jpg` ↔ `CAM_1.png`). Pairs with mismatched spatial dimensions are discarded during dataset construction. All images are resized to **352 × 352** at train/inference time.
 
 ### Train / Val / Test Split
@@ -122,7 +122,7 @@ Images and masks are paired by **matching filename stem** (e.g., `CAM_1.jpg` ↔
 
 ## Model and Methodology
 
-### Architecture — SINet (Fan et al., CVPR 2020)
+### Architecture - SINet (Fan et al., CVPR 2020)
 
 | Component | Details |
 |---|---|
@@ -316,9 +316,9 @@ Camouflage-Object-Detection-System/
 ├── camo_results.zip                       # SINet predictions on CAMO Test (250 masks)
 ├── military_results.zip                   # SINet predictions on Military dataset (1,000 masks)
 │
-├── GradCAM_CAMO.zip                       # Grad-CAM overlays — CAMO (16 images)
-├── GradCAM_NC4K.zip                       # Grad-CAM overlays — NC4K (16 images)
-└── GradCAM_Military.zip                   # Grad-CAM overlays — Military (16 images)
+├── GradCAM_CAMO.zip                       # Grad-CAM overlays - CAMO (16 images)
+├── GradCAM_NC4K.zip                       # Grad-CAM overlays - NC4K (16 images)
+└── GradCAM_Military.zip                   # Grad-CAM overlays - Military (16 images)
 ```
 
 > **Note:** Model weights (`SINet_best.pth`) and raw datasets are not included — they are accessed via Kaggle input paths during notebook execution.
@@ -348,18 +348,18 @@ This implementation is based on the **SINet** architecture:
 > [Paper](https://openaccess.thecvf.com/content_CVPR_2020/papers/Fan_Camouflaged_Object_Detection_CVPR_2020_paper.pdf) | [Official Code](https://github.com/DengPingFan/SINet/)
 
 **Datasets:**
-- **COD10K-v3** — Fan et al., TPAMI 2021
-- **CAMO** — Le et al., Computer Vision and Image Understanding (CVIU) 2019
-- **NC4K** — Lv et al., CVPR 2021
+- **COD10K-v3** - Fan et al., TPAMI 2021
+- **CAMO** - Le et al., Computer Vision and Image Understanding (CVIU) 2019
+- **NC4K** - Lv et al., CVPR 2021
 
 **Base notebook reference:**
 - [Camouflage Detection by ManthanKPatel](https://github.com/ManthanKPatel/Camouflage-Detection/blob/main/DLProject.ipynb)
 
 **Evaluation library:**
-- [`py_sod_metrics`](https://github.com/lartpang/PySODMetrics) — Yunchao Liang
+- [`py_sod_metrics`](https://github.com/lartpang/PySODMetrics) - Yunchao Liang
 
 ---
 
 ## License
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License**, see the [LICENSE](LICENSE) file for details.
