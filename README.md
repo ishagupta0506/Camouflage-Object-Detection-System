@@ -1,12 +1,12 @@
 # Camouflage Object Detection System
 
-A deep learning pipeline for detecting and segmenting camouflaged objects using **SINet (Search-Identification Network)** with a dual-branch ResNet-50 backbone. The system is benchmarked across four datasets — COD10K, CAMO, NC4K, and a custom Military Personnel dataset — producing binary segmentation masks and Grad-CAM saliency visualizations.
+A deep learning pipeline for detecting and segmenting camouflaged objects using **SINet (Search-Identification Network)** with a dual-branch ResNet-50 backbone. The system is benchmarked across four datasets - COD10K, CAMO, NC4K, and a custom Military Personnel dataset producing binary segmentation masks and Grad-CAM saliency visualizations.
 
 ---
 
 ## Problem Statement
 
-Camouflaged object detection (COD) is significantly harder than salient object detection because the targets deliberately blend into their surroundings through texture, color, and pattern mimicry. Standard edge or saliency detectors fail since there is minimal foreground-background contrast. Accurate detection requires multi-scale context reasoning, boundary refinement, and attention mechanisms that can distinguish subtle structural differences — making it an active research challenge with applications in wildlife monitoring, military surveillance, and medical imaging.
+Camouflaged object detection (COD) is significantly harder than salient object detection because the targets deliberately blend into their surroundings through texture, color, and pattern mimicry. Standard edge or saliency detectors fail since there is minimal foreground-background contrast. Accurate detection requires multi-scale context reasoning, boundary refinement, and attention mechanisms that can distinguish subtle structural differences making it an active research challenge with applications in wildlife monitoring, military surveillance, and medical imaging.
 
 ---
 
